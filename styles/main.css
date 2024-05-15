@@ -39,6 +39,11 @@ nav li a:hover {
     background-color: #aa7653c4;
     color: rgb(254, 249, 237);
     transition: 0.3s;
+    text-decoration: none;
+}
+
+.active-nav {
+    text-decoration: underline #aa7653;
 }
 
 body {
