@@ -15,6 +15,7 @@ h1 {
     text-align: center;
     margin: 2rem;
     font-weight: bold;
+    line-height: 1.6;
 }
 
 h2 {
@@ -28,12 +29,12 @@ h2 {
 main {
     margin: 2rem auto;
     max-width: 115vh;
-    padding: 0 15px;
+    padding: 0 2rem;
     font-size: 1rem;
 }
 
 ul li {
-    padding: 0.4rem;
+    padding: 0.5rem;
 }
 
 section {
