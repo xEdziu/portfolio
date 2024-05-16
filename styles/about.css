@@ -1,52 +1,79 @@
 .profile-pic {
-    width: 45%;
-    height: auto;
+  width: 45%;
+  height: auto;
 }
 
 .header {
-    display: inline-block;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .header-text {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    margin: 1rem;
+  margin: 1rem;
+  margin-left: 4rem;
 }
 
 .header-text h1 {
-    font-size: 2rem;
-    color: #333;
+  font-size: 2rem;
+  color: #333;
 }
 
 .header-text p {
-    margin: 1rem auto 1rem;
-    font-size: 1rem;
-    color: #333;
-    text-align: justify;
+  margin: 1rem auto 1rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
 }
 
 #name {
-    background-color: #aa7653b1;
-    color: rgb(254, 249, 237);
-    padding: 0.5rem;
+  background-color: #aa7653b1;
+  color: rgb(254, 249, 237);
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 804px) {
+  .profile-pic {
+    width: 60%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text p {
+    font-size: 0.8rem;
+  }
+
+  .header-text {
+    margin: 0.5rem;
+  }
+
+  #name {
+    padding: 0.2rem;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .header-text h1 {
-        font-size: 1.5rem;
-    }
+  .profile-pic {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
 
-    .header-text p {
-        font-size: 0.8rem;
-    }
+  .header-text h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+  }
 
-    #name {
-        padding: 0.2rem;
-    }
-
-    .header {
-        flex-wrap: wrap;
-    }
+  .header-text p {
+    font-size: 0.8rem;
+  }
 }
