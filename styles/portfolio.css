@@ -41,16 +41,16 @@
 
 /* Filter buttons section */
 
-.filter-section {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-}
-
-.filter-section > p {
+main > p {
     font-size: 1.5rem;
     color: #333;
     text-align: center;
     margin: 1rem auto 1rem;
+}
+
+.filter-section {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .toggle-button {
@@ -60,42 +60,41 @@
     margin-top: 2rem;
     margin-bottom: 3rem;
     padding: 0.5rem;
-    border: 0.15em solid #12E1B9;
     border-radius: 10px;
-    background-color: white;
     box-sizing: border-box;
-}
-
-.toggle-button input[type="checkbox"] {
-    display: none;
 }
 
 .filter-checkbox {
     display: none;
 }
 
-.toggle-button .filter-button {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #12E1B9;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s;
-}
-
 .toggle-button input[type="checkbox"]:checked + .filter-button {
     background-color: #ed1e46;
 }
 
-.toggle-button .label-text {
+.toggle-button .filter-text {
     font-size: 1rem;
     color: #12E1B9;
     transition: color 0.3s;
 }
 
-.toggle-button input[type="checkbox"]:checked + .filter-button + .label-text {
+.toggle-button input[type="checkbox"]:checked + .filter-text {
     color: #ed1e46;
 }
+
+.php {
+    background-color: #b385ebbc;
+    border: 0.2em solid #814bc3;
+}
+
+.php .filter-text {
+    font-style: bold;
+    color: #602ca4;
+    background-color: transparent;
+    text-transform: lowercase;
+}
+
+
 
 @media screen and (max-width: 804px) {
 
