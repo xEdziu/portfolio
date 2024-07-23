@@ -1,0 +1,106 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    margin: 2rem auto 3rem auto; /* Wyśrodkowanie poziome */
+    border: 0.15em solid #aa7653;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    color: rgb(49, 49, 49);
+    margin-right: 10px; /* Dodanie odstępu między ikoną a inputem */
+    margin-left: 10px; /* Dodanie odstępu między ikoną a inputem */
+}
+
+.search {
+    flex: 1;
+    height: 3rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+    justify-self: center;
+}
+
+.search:focus {
+    outline: none;
+    border-color: #aa7653; /* Utrzymanie koloru obramowania na focus */
+}
+
+
+::placeholder {
+    color: rgba(49, 49, 49, 0.605);
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+/* Filter buttons section */
+
+.filter-section {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-section > p {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin: 1rem auto 1rem;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    border: 0.15em solid #12E1B9;
+    border-radius: 10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.toggle-button input[type="checkbox"] {
+    display: none;
+}
+
+.filter-checkbox {
+    display: none;
+}
+
+.toggle-button .filter-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #12E1B9;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-button input[type="checkbox"]:checked + .filter-button {
+    background-color: #ed1e46;
+}
+
+.toggle-button .label-text {
+    font-size: 1rem;
+    color: #12E1B9;
+    transition: color 0.3s;
+}
+
+.toggle-button input[type="checkbox"]:checked + .filter-button + .label-text {
+    color: #ed1e46;
+}
+
+@media screen and (max-width: 804px) {
+
+  
+  @media screen and (max-width: 600px) {
+
+  }
+}
