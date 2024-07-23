@@ -164,8 +164,6 @@ main > p {
     color: #927807;
 }
 
-/* Personal */
-
 /* Personal Projects */
 
 .personal-projects {
@@ -178,11 +176,31 @@ main > p {
     color: #818181; /* Czarny kolor tekstu */
 }
 
-
+/* Media Queries */
 @media screen and (max-width: 804px) {
+    .search-container {
+        width: 80%; /* Zmniejsz szerokość search bar */
+    }
 
-  
-  @media screen and (max-width: 600px) {
+    .toggle-button {
+        margin: 1%; /* Dodaj margines dla odstępów między kafelkami */
+    }
+}
 
-  }
+@media screen and (max-width: 600px) {
+    .search-container {
+        margin: auto; /* Wyśrodkowanie poziome */
+        width: 95%; /* Zmniejsz szerokość search bar */
+    }
+
+    .toggle-button {
+        margin: 1%; /* Dodaj margines dla odstępów między kafelkami */
+    }
+}
+
+/* Ensure filter-section wraps items */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap; /* Dodanie flex-wrap dla wrapowania kafelków */
+    justify-content: center; /* Wyśrodkowanie kafelków */
 }
