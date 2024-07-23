@@ -37,6 +37,30 @@
                 <input type="checkbox" class="filter-checkbox">
                 <span class="filter-text">PHP</span>
             </label>
+            <label class="toggle-button java">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">java</span>
+            </label>
+            <label class="toggle-button python">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">Python</span>
+            </label>
+            <label class="toggle-button csharp">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">C#</span>
+            </label>
+            <label class="toggle-button cpp">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">C++</span>
+            </label>
+            <label class="toggle-button university">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">University</span>
+            </label>
+            <label class="toggle-button personal-projects">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">Personal</span>
+            </label>
         </section>
         <section class="project-section">
 
@@ -55,5 +79,22 @@
 <script type="module">
     import { toggleMenu } from './scripts/navbar.js';
     window.toggleMenu = toggleMenu;
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+    
+        toggleButtons.forEach(button => {
+            const checkbox = button.querySelector('.filter-checkbox');
+            checkbox.addEventListener('change', (event) => {
+                console.log(`Checkbox for ${button.querySelector('.filter-text').textContent} changed to ${event.target.checked}`);
+                if (event.target.checked) {
+                    button.classList.add('highlighted');
+                } else {
+                    button.classList.remove('highlighted');
+                }
+            });
+        });
+    });
 </script>
 </html>

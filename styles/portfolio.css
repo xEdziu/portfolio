@@ -45,31 +45,34 @@ main > p {
     font-size: 1.5rem;
     color: #333;
     text-align: center;
-    margin: 1rem auto 1rem;
+    margin: 1rem auto 0.3rem auto;
 }
 
 .filter-section {
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .toggle-button {
     display: flex;
-    align-items: center;
     cursor: pointer;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    margin-left: 1rem;
     padding: 0.5rem;
     border-radius: 10px;
     box-sizing: border-box;
+    width: fit-content;
+    background-color: transparent;
+    text-transform: lowercase;
+    font-style: bold;
 }
 
 .filter-checkbox {
     display: none;
-}
-
-.toggle-button input[type="checkbox"]:checked + .filter-button {
-    background-color: #ed1e46;
 }
 
 .toggle-button .filter-text {
@@ -78,22 +81,102 @@ main > p {
     transition: color 0.3s;
 }
 
-.toggle-button input[type="checkbox"]:checked + .filter-text {
-    color: #ed1e46;
+/* Stylowanie dla zaznaczonego stanu checkboxa */
+.toggle-button.highlighted {
+    background-color: #ff6666; /* Jasny czerwony kolor tła */
+    border: 0.2em solid #cc0000; /* Ciemniejszy czerwony kolor obramowania */
+    color: #f6e5e5; /* Biały kolor tekstu */
 }
 
+.toggle-button.highlighted .filter-text {
+    color: #f6e5e5; /* Biały kolor tekstu */
+}
+
+/* PHP */
+
 .php {
-    background-color: #b385ebbc;
+    background-color: #b385eb;
     border: 0.2em solid #814bc3;
 }
 
 .php .filter-text {
-    font-style: bold;
     color: #602ca4;
     background-color: transparent;
-    text-transform: lowercase;
 }
 
+/* Java */
+
+.java {
+    background-color: #f89820;
+    border: 0.2em solid #b3541e;
+}
+
+.java .filter-text {
+    background-color: transparent;
+    color: #b3541e;
+}
+
+/* Python */
+
+.python {
+    background-color: #4384b9;
+    border: 0.2em solid #2e5b7d;
+}
+
+.python .filter-text {
+    background-color: transparent;
+    color: #bad7ed;
+}
+
+/* C# */
+
+.csharp {
+    background-color: #6f4e7c;
+    border: 0.2em solid #4a2f4f;
+}
+
+.csharp .filter-text {
+    background-color: transparent;
+    color: #d28dde;
+}
+
+/* C++ */
+
+.cpp {
+    background-color: #1f8b4c;
+    border: 0.2em solid #0f4b2a;
+}
+
+.cpp .filter-text {
+    background-color: transparent;
+    color: #b5e1c3;
+}
+
+/* University */
+
+.university {
+    background-color: #f0c929;
+    border: 0.2em solid #bfa21b;
+}
+
+.university .filter-text {
+    background-color: transparent;
+    color: #927807;
+}
+
+/* Personal */
+
+/* Personal Projects */
+
+.personal-projects {
+    background-color: #d9d9d9; /* Jasny szary kolor tła */
+    border: 0.2em solid #a6a6a6; /* Ciemniejszy szary kolor obramowania */
+}
+
+.personal-projects .filter-text {
+    background-color: transparent;
+    color: #818181; /* Czarny kolor tekstu */
+}
 
 
 @media screen and (max-width: 804px) {
