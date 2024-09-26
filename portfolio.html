@@ -18,7 +18,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="#" class="active-nav">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li class="icon" >
             <a href="javascript:void(0);" onclick="toggleMenu()" id="hamburger">
                 <i class="fa fa-bars"></i>
@@ -28,10 +28,12 @@
 <body>
     <div class="search-container">
         <span class="search-icon">🔍</span>
-        <input type="text" class="search" placeholder="Search for projects...">
+        <input type="text" id="searchInput" class="search" placeholder="Search for projects...">
     </div>
     <main>
+        <p>Looking for CV? Find it <a href="#cv">here</a></p>
         <p><b>Filters:</b></p>
+        
         <section class="filter-section">
             <label class="toggle-button php">
                 <input type="checkbox" class="filter-checkbox">
@@ -43,28 +45,35 @@
             </label>
             <label class="toggle-button python">
                 <input type="checkbox" class="filter-checkbox">
-                <span class="filter-text">Python</span>
+                <span class="filter-text">python</span>
             </label>
             <label class="toggle-button csharp">
                 <input type="checkbox" class="filter-checkbox">
-                <span class="filter-text">C#</span>
+                <span class="filter-text">c#</span>
             </label>
             <label class="toggle-button cpp">
                 <input type="checkbox" class="filter-checkbox">
-                <span class="filter-text">C++</span>
+                <span class="filter-text">c++</span>
             </label>
             <label class="toggle-button university">
                 <input type="checkbox" class="filter-checkbox">
-                <span class="filter-text">University</span>
+                <span class="filter-text">university</span>
             </label>
             <label class="toggle-button personal-projects">
                 <input type="checkbox" class="filter-checkbox">
-                <span class="filter-text">Personal</span>
+                <span class="filter-text">personal</span>
+            </label>
+            <label class="toggle-button website">
+                <input type="checkbox" class="filter-checkbox">
+                <span class="filter-text">website</span>
             </label>
         </section>
         <section class="project-section">
-
+            
         </section>
+        <div id="cv">
+            <a href="CV-PHP-GORAL.pdf" download>PHP Developer CV</a>
+        </div>
     </main>
 </body>
 <footer>
@@ -76,25 +85,97 @@
         <li><a href="https://www.instagram.com/agoral06/"><i class="fab fa-instagram"></i></a></li>
     </ul>
 </footer>
-<script type="module">
-    import { toggleMenu } from './scripts/navbar.js';
-    window.toggleMenu = toggleMenu;
-</script>
+<!-- Modal structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="" alt="">
+    <h2></h2>
+    <p></p>
+    <a href="">View project</a>
+  </div>
+</div>
+<script type="text/javascript" src="./scripts/navbar.js"></script>
+<script type="text/javascript"> window.toggleMenu = toggleMenu;</script>
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButtons = document.querySelectorAll('.toggle-button');
-    
-        toggleButtons.forEach(button => {
-            const checkbox = button.querySelector('.filter-checkbox');
-            checkbox.addEventListener('change', (event) => {
-                console.log(`Checkbox for ${button.querySelector('.filter-text').textContent} changed to ${event.target.checked}`);
-                if (event.target.checked) {
-                    button.classList.add('highlighted');
-                } else {
-                    button.classList.remove('highlighted');
-                }
-            });
+let projects = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+            projects = data.projects;
+            generateProjectCards();
+        })
+        .catch(error => console.error('Error fetching the JSON file:', error));
+
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+    toggleButtons.forEach(button => {
+        const checkbox = button.querySelector('.filter-checkbox');
+        checkbox.addEventListener('change', (event) => {
+            generateProjectCards();
+            if (event.target.checked) {
+                button.classList.add('highlighted');
+            } else {
+                button.classList.remove('highlighted');
+            }
         });
     });
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', () => {
+        generateProjectCards();
+    });
+});
+
+function generateProjectCards() {
+    const projectSection = document.querySelector('.project-section');
+    projectSection.innerHTML = '';
+
+    const checkedFilters = document.querySelectorAll('.filter-checkbox:checked');
+    const checkedTags = Array.from(checkedFilters).map(filter => filter.parentElement.querySelector('.filter-text').textContent);
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+    projects.forEach(project => {
+        const projectTags = project.tags;
+        const hasAllTags = checkedTags.every(tag => projectTags.includes(tag));
+        const matchesSearch = project.name.toLowerCase().includes(searchInput) || project.thumbnail.toLowerCase().includes(searchInput);
+
+        if ((hasAllTags || checkedTags.length === 0) && matchesSearch) {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add('project-card');
+            projectCard.innerHTML = `
+                <img src="./images/projects/${project.coverPhoto}" alt="${project.name}">
+                <h3>${project.name}</h3>
+                <p>${project.thumbnail}</p>
+                <button class="project-link" onclick="openAndFillModal('${project.name}')">Details</button>
+            `;
+            projectSection.appendChild(projectCard);
+        }
+    });
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("openModalBtn");
+var span = document.getElementsByClassName("close")[0];
+
+function openAndFillModal(title) {
+    const project = projects.find(project => project.name === title);
+    modal.style.display = "block";
+    modal.querySelector('h2').textContent = project.name;
+    modal.querySelector('p').textContent = project.description;
+    modal.querySelector('img').src = `./images/projects/${project.coverPhoto}`;
+    modal.querySelector('a').href = project.link;
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 </html>

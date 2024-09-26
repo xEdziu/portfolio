@@ -1,0 +1,84 @@
+{
+    "projects": [
+        {
+            "name": "KeepMyPassword for Desktop",
+            "thumbnail": "Password manager as a desktop application written in JavaFx",
+            "coverPhoto": "KMP.png",
+            "description": "KeepMyPassword is an open-source project under MIT license. It aims to provide a TRULY secure place to store all your sensitive data. Everything is stored locally on your device. No one but YOU will ever have access to your passwords. The code is available for review whenever you need it.",
+            "tags": ["java", "personal"],
+            "link": "https://github.com/xEdziu/KeepMyPassword-Desktop"
+        },
+        {
+            "name": "Przelewy24-PHP-API",
+            "thumbnail": "A ready-made solution in pure PHP allowing to connect to the Przelewy24 API in PHP",
+            "coverPhoto": "P24API.png",
+            "description": "The Przelewy24 PHP API project is a ready-made solution for PHP developers who want to connect their application to the Przelewy24 payment system. The API allows seamless sending of requests to the Przelewy24 server and receiving responses.",
+            "tags": ["PHP", "personal"],
+            "link": "https://github.com/xEdziu/Przelewy24-PHP-API"
+        },
+        {
+            "name": "WaterMarker",
+            "thumbnail": "An intuitive tool for photography enthusiasts and graphic designers that allows you to quickly apply your own watermark to your works!",
+            "coverPhoto": "watermarker.png",
+            "description": "A very simple and intuitive tool written in C# for people who want to mark their works. In just a few clicks, it is possible to apply a watermark to a larger number of photos instead of doing it manually!",
+            "tags": ["c#", "personal"],
+            "link": "https://github.com/WebAce-Group/WaterMarker"
+        },
+        {
+            "name": "midi2key",
+            "thumbnail": "Interpreter for devices using MIDI, allowing you to map buttons to mouse and keyboard",
+            "coverPhoto": "midi2key.png",
+            "description": "This script is a product of curiosity and the will to have fun with friends! I created this script to be able to play games on my PC using my Yamaha Piaggero NP-32 keyboard. One could ask: 'Why?'. Well, the answer is simple - because I can!",
+            "tags": ["python", "personal"],
+            "link": "https://github.com/xEdziu/midi2key"
+        },
+        {
+            "name": "ChessFx",
+            "thumbnail": "A desktop chess game written in JavaFx",
+            "coverPhoto": "chessfx.png",
+            "description": "ChessFx is a project for the course Design and Analysis of Algorithms at the Wrocław University of Science and Technology. A chess game written in JavaFx. The project includes algorithms for checking the correctness of moves, checks, checkmates, stalemates, castling, en passant captures, and pawn promotion, among others. Additionally, the project includes the possibility of playing against the computer, which uses the minimax algorithm with alpha-beta pruning (unfortunately, it is not very fast).",
+            "tags": ["java", "university"],
+            "link": "https://github.com/xEdziu/ChessFx"
+        },
+        {
+            "name": "Data Structures - Lists and Arrays",
+            "thumbnail": "The first of three projects for the Data Structures course",
+            "coverPhoto": "sd1.png",
+            "description": "A project for the Data Structures course at the Wrocław University of Science and Technology. The project includes the implementation of a singly linked list, a singly linked list with a head, a singly linked list with a head and tail, a doubly linked list, and a dynamic array. All structures are implemented in C++.",
+            "tags": ["c++", "university"],
+            "link": "https://github.com/xEdziu/pwr-sd-proj1"
+        },
+        {
+            "name": "Data Structures - Priority Queues",
+            "thumbnail": "The second project for the Data Structures course",
+            "coverPhoto": "sd2.png",
+            "description": "A project for the Data Structures course at the Wrocław University of Science and Technology. The project includes the implementation of a priority queue implemented on a binary heap and on an array. All structures are implemented in C++. Additionally, the project includes a console menu that allows interaction with the program written in the ncurses library.",
+            "tags": ["c++", "university"],
+            "link": "https://github.com/xEdziu/pwr-sd-proj2"
+        },
+        {
+            "name": "Data Structures - Hash Dictionaries",
+            "thumbnail": "The third project for the Data Structures course",
+            "coverPhoto": "sd3.png",
+            "description": "A project for the Data Structures course at the Wrocław University of Science and Technology. The project includes the implementation of a dictionary implemented on a BST tree, open and closed addressing, and cuckoo hashing. All structures are implemented in C++.",
+            "tags": ["c++", "university"],
+            "link": "https://github.com/xEdziu/pwr-sd-proj3"
+        },
+        {
+            "name": "TOKAGO",
+            "thumbnail": "A 2D platformer written in Quintus.js",
+            "coverPhoto": "TOKAGO.png",
+            "description": "While creating this game, I was responsible for everything related to the server side - from user login and registration, through saving scores and statistics, to connecting payments with the PayPal system. The game was created with my friend Kuba Przybysz. My duties also included creating an API that allowed communication between the game and the server. All of this was implemented in PHP, without using any frameworks.",
+            "tags": ["PHP", "personal", "website"],
+            "link": "https://tokago.webace-group.dev"
+        },
+        {
+            "name": "Animal shelter in Gorzów Wielkopolski",
+            "thumbnail": "A website for animal shelter in Gorzów Wielkopolski",
+            "coverPhoto": "azorki.png",
+            "description": "A website for a dog shelter in Gorzów Wielkopolski. The website was created voluntarily for the shelter. The website is tailored to the needs of the shelter and allows for easy management of the animals available for adoption. The website is written in PHP on the backend. I was responsible for the entire backend of the website. The functionality of the website includes adding, editing and deleting animals, as well as logging in and registering users, 2FA for administrators to access the admin panel, contact forms and payment integration with Przelewy24. All was done without using any frameworks.",
+            "tags": ["PHP", "personal", "website"],
+            "link": "https://schronisko-gorzow.pl"
+        }
+       ]
+}

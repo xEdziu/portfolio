@@ -1,4 +1,4 @@
-export function toggleMenu() {
+function toggleMenu() {
     var x = document.getElementById("nav-menu");
     if (x.className === "topnav") {
         x.className += " responsive";
