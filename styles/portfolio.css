@@ -291,7 +291,7 @@ main > p {
   
   /* Modal Content */
   .modal-content {
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 30px;
     border: 1px solid #888;
     border-radius: 10px;
@@ -319,8 +319,6 @@ main > p {
         padding: 10px;
         color: #aa7653;
     }
-
-
 
   .close {
     color: #aaa;

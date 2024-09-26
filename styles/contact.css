@@ -39,6 +39,8 @@ h1 {
     background-color: #aa7653;
     color: rgb(254, 249, 237);
     cursor: pointer;
+    transition: all 0.5s;
+    font-size: 1.2rem;
 }
 
 .contactForm button:hover {

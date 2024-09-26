@@ -10,9 +10,9 @@
         },
         {
             "name": "Przelewy24-PHP-API",
-            "thumbnail": "A ready-made solution in pure PHP allowing to connect to the Przelewy24 API in PHP",
+            "thumbnail": "A ready to use solution in pure PHP allowing to connect to the Przelewy24 API in PHP",
             "coverPhoto": "P24API.png",
-            "description": "The Przelewy24 PHP API project is a ready-made solution for PHP developers who want to connect their application to the Przelewy24 payment system. The API allows seamless sending of requests to the Przelewy24 server and receiving responses.",
+            "description": "The Przelewy24 PHP API project is a ready to use solution for PHP developers who want to connect their application to the Przelewy24 payment system. The API allows seamless sending of requests to the Przelewy24 server and receiving responses.",
             "tags": ["PHP", "personal"],
             "link": "https://github.com/xEdziu/Przelewy24-PHP-API"
         },
