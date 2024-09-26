@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi! Welcome to my portfolio. 
+    Explore my journey in programming and other projects!">
+    <meta name="keywords" content="Adrian Goral, Portfolio, IT, Automation, Systems, RaspberryPi, PHP, Java">
+    <meta name="author" content="Adrian Goral">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="scripts/navbar.js"></script>
+    <title>Adrian Goral - Portfolio</title>
+</head>
+<nav>
+    <ul class="topnav" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#" class="active-nav">Contact</a></li>
+        <li class="icon" >
+            <a href="javascript:void(0);" onclick="toggleMenu()" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<body>
+<main>
+    <h1>Get in touch with me!</h1>
+    <br>
+    <form id="contactForm" class="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send message!</button>
+        <div class="g-recaptcha" data-sitekey="6LePmU8qAAAAALQuTdDFgCfqX35OrftTI01DLb51"></div>
+    </form>
+</main>
+</body>
+<footer>
+    <p>Made with hate towards frontend by Adrian Goral ❤️ Copyright &copy; 2024</p>
+    <ul class="socials">
+        <li><a href="https://github.com/xEdziu"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://linkedin.com/in/adrian-goral"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.facebook.com/adrian.goral.6"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/agoral06/"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+</footer>
+<script type="text/javascript" src="./scripts/navbar.js"></script>
+<script type="text/javascript"> window.toggleMenu = toggleMenu;</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+emailjs.init({
+    publicKey: 'FXyMikMmC3x2Ozj0g',
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    window.onload = function() {
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            emailjs.sendForm('service_jlz4gte', 'template_bagcezz', this)
+            .then(
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Please wait',
+                    text: 'Sending message...',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                    showConfirmButton: false,
+                    timer: 5000
+                })
+            )
+            .then(function(response) {
+                Swal.fire({
+                    title: 'Done!',
+                    text: 'Message sent successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+                document.getElementById("contactForm").reset();
+            }, function(error) {
+                Swal.fire({
+                    title: 'Oops!',
+                    text: 'Something went wrong. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                })
+            });
+        });
+    }
+</script>
+</html>
