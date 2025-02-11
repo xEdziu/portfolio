@@ -9,6 +9,14 @@
             "link": "https://github.com/xEdziu/KeepMyPassword-Desktop"
         },
         {
+            "name": "Klama",
+            "thumbnail": "KLAMA climbing gym is a group project for the Databases Course at the Wrocław University of Science and Technology",
+            "coverPhoto": "klama.png",
+            "description": "KLAMA is a climbing institution made-up for the sake of the project. Backend written in Spring Boot, frontend in HTML, CSS, and JavaScript. All with MySQL database. Apart from basic CRUD operations, there is a registration and login system, shop, rental system, and a fully functional admin panel.",
+            "tags": ["java", "personal", "university", "website"],
+            "link": "https://github.com/xEdziu/Klama"
+        },
+        {
             "name": "Przelewy24-PHP-API",
             "thumbnail": "A ready to use solution in pure PHP allowing to connect to the Przelewy24 API in PHP",
             "coverPhoto": "P24API.png",

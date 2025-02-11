@@ -333,3 +333,22 @@ main > p {
     text-decoration: none;
     cursor: pointer;
   }
+
+  #cv {
+    border: 0.2em solid #aa7653;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: #aa7653;
+  }
+
+    #cv a {
+        color: #fff;
+        text-decoration: none;
+        background: transparent;
+        margin: 0.5rem;
+    }
+
+    #cv a:hover {
+        color: rgb(122, 44, 44);
+        transition: 0.3s all;
+    }
